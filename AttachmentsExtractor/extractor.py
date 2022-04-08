@@ -9,8 +9,15 @@ import json
 
 
 error_files =[] 
-def read_zipped_xml_bin_embeddings( path_zipped_xml, destination_folder):
+def extract( path_zipped_xml, destination_folder):
     temp_dir = tempfile.mkdtemp()
+    
+    destination_folder = os.path.abspath(destination_folder)
+    if not os.path.exists(destination_folder):
+        os.makedirs(destination_folder)
+   
+
+
 
     zip_file = zipfile.ZipFile( path_zipped_xml )
     zip_file.extractall( temp_dir )

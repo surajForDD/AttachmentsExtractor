@@ -10,12 +10,12 @@ README = (HERE / "README.md").read_text()
 print("Packages :",find_packages(exclude=("tests",)))
 # This call to setup() does all the work
 setup(
-    name="excel-123attachments",
-    version="1.0.0",
-    description="Extracts Embeded documents From excel.",
+    name="AttachmentsExtractor",
+    version="1.0.1",
+    description="Extracts Embeded documents From Open XML documents. Such as excels, documents, presentations etc. .",
     long_description=README,
     long_description_content_type="text/markdown",
-    url="https://github.com/realpython/reader",
+    url="https://github.com/surajForDD/AttachmentsExtractor",
     author="Suraj Kumar",
     author_email="surajkm09@gmail.com",
     license="MIT",
@@ -29,7 +29,7 @@ setup(
     install_requires=["olefile"],
     entry_points={
         "console_scripts": [
-            "realpython=pythonApp.__main__:main",
+            "AttachmentsExtractor=AttachmentsExtractor.__main__:main",
         ]
     },
 )
